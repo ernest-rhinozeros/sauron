@@ -1,7 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
+
+import {HomeComponent} from './component/private/home/home.component';
+import {LoginComponent} from './component/public/login/login.component';
+import {RegisterComponent} from './component/public/register/register.component';
+
+import {AuthGuard} from './service/private/auth-guard';
 
 export const routes: Routes = [
   {
@@ -16,6 +20,17 @@ export const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: '',
+    children: [
+      {
+        path: 'home',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: HomeComponent,
+      },
+    ],
   },
 ];
 
