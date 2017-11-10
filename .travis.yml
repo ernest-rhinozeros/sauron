@@ -1,9 +1,13 @@
 language: scala
 jdk:
   - oraclejdk8
+node_js:
 secure: "12345secure"
+before_script:
+  - npm install -g @angular/cli
 script:
   - sbt clean coverage test && sbt coverageAggregate
+  - ng build --prod
 after_success:
   - sbt coveralls
 cache:
