@@ -23,9 +23,7 @@ class Version @Inject()(override val config: Configuration,val ws: WSClient, ove
       val info = com.zeiss.meditec.webservice.BuildInfo
       val version = Json.obj("name" -> info.name,
         "version" -> info.version,
-        "supportedApiVersions" -> Seq("v1"),
-        "modules" -> Seq(zcalc, archimedes,raytracing, zcalcui, wpui, dash))
-
+        "supportedApiVersions" -> Seq("v1"))
       Ok(version)
   }
 }
