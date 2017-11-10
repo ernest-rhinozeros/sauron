@@ -5,7 +5,7 @@ import { AuthGuard } from './auth-guard';
 describe('AuthGuardService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AuthGuard]
+      providers: [AuthGuard],
     });
   });
 
