@@ -21,7 +21,11 @@
       "styles": [
         "assets/scss/bootstrap.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../../node_modules/jquery/dist/jquery.min.js",
+        "../../node_modules/bootstrap/js/dist/util.js",
+        "../../node_modules/bootstrap/js/dist/dropdown.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
