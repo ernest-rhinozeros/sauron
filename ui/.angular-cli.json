@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../app/views",
       "assets": [
         "assets",
         "favicon.ico"
@@ -22,9 +22,9 @@
         "assets/scss/bootstrap.scss"
       ],
       "scripts": [
-        "../../node_modules/jquery/dist/jquery.min.js",
-        "../../node_modules/bootstrap/js/dist/util.js",
-        "../../node_modules/bootstrap/js/dist/dropdown.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/js/dist/util.js",
+        "../node_modules/bootstrap/js/dist/dropdown.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
