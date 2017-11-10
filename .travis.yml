@@ -6,10 +6,8 @@ secure: "12345secure"
 before_script:
   - npm install -g @angular/cli
 script:
-  - sbt clean coverage test && sbt coverageAggregate
+  - sbt clean compile coverage test coverageReport
   - ng build --prod
-after_success:
-  - sbt coveralls
 cache:
   directories:
     - $HOME/.ivy2/cache
